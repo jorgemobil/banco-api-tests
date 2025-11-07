@@ -8,7 +8,6 @@ describe('Transferências', () => {
 
      let token
 
-        //Capturando o Token e lembrando que toda função usando async precisa ter o await ao chamar ela, beforeEach roda uma vez antes de cada it
     beforeEach(async () => {
             token = await obterToken('julio.lima', '123456')
     })
@@ -17,7 +16,7 @@ describe('Transferências', () => {
 
         it('Deve retornar sucesso com 201 quando o valor da transferencia for acima ou igual R$ 10,00', async () => {
 
-            //utilizando shallow copy
+            
             const bodyTransferencias = { ...postTransferencias }
 
             const resposta = await request(process.env.BASE_URL)

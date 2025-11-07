@@ -3,7 +3,7 @@ const { expect } = require('chai')
 require('dotenv').config()
 const postLogin = require('../fixtures/postLogin.json')
 
-//estou usando o async por causa do await se eu nao usar o await não preciso do async
+
 describe('Login',  () => {
     describe('POST /login', () => {
         it('Deve retornar 200 com token em string quando usar credenciais válidas ', async() => {
